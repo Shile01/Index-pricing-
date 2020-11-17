@@ -1,0 +1,319 @@
+/* ========
+   Variables
+   ======== */
+:root {
+  --primaryColor: #410ff8;
+  --navColor: #b8b8b8;
+}
+/* ========
+   Reset
+   ======== */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+a,
+ul,
+li,
+h3 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+.nav_item + .nav_item {
+  margin-left: 20px;
+}
+
+.nav_link {
+  color: var(--navColor);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  display: inline-block;
+  background: var(--primaryColor);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px auto;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 24px;
+  background: var(--primaryColor);
+  font-size: 0.9rem;
+  border-radius: 5px;
+  color: #fff;
+  align-items: center;
+}
+/* ========
+   Base styles
+   ======== */
+
+body {
+  overflow-x: hidden;
+  font-family: "Lato";
+  font-size: 0.95rem;
+}
+
+p {
+  font-family: "Lato light";
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: "Lato light";
+  src: url("assets/fonts/Lato-Regular.ttf");
+}
+
+.header {
+  background-color: #f9fff2;
+  background-image: url("assets/images/back-image.png");
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+/* ========
+   Mobile style
+   ======== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.header_wrapper {
+  padding: 20px 10px;
+  padding-bottom: 40px;
+}
+
+.logo {
+  grid-column: 1/3;
+}
+
+.nav_list {
+  display: none;
+}
+
+.greetings_wrapper {
+  grid-column: 1/9;
+  align-items: center;
+  text-align: center;
+}
+
+.greetings_wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.greetings_wrapper p {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+
+span {
+  color: #32bba4;
+}
+
+.main {
+  padding: 30px 20px;
+}
+
+.card {
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  padding: 10px 30px;
+  padding-bottom: 40px;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.15), 0 0px 1px rgba(0, 0, 0, 0.15);
+}
+
+.card:nth-child(2) {
+  background-color: var(--primaryColor);
+  color: #fff;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15),
+    0 0px 15px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card:nth-child(2) .btn {
+  background: #fff;
+  color: var(--primaryColor);
+}
+
+.card + .card {
+  margin-top: 40px;
+}
+
+.checkbox {
+  display: grid;
+  width: 36%;
+  height: 30px;
+  width: 30px;
+  background: #cfc3fa;
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+.card:nth-child(2) .checkbox {
+  background: #fff;
+}
+
+.pricing {
+  font-size: 1.9rem;
+}
+
+.annual-billing {
+  font-size: 0.7rem;
+  color: var(--navColor, #b8b8b8);
+  font-weight: 800;
+}
+
+.features {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card:nth-child(2) .features {
+  color: var(--navColor);
+}
+.features p {
+  font-size: 0.8rem;
+}
+
+.features + .features {
+  margin-top: 10px;
+}
+/* ========
+   Tablets & Laptops
+   ======== */
+
+@media screen and (min-width: 400px) {
+  .card {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .card {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 620px) {
+  .header {
+    background-size: 115%;
+  }
+
+  .greetings_wrapper p {
+    width: 60%;
+    font-size: 0.8rem;
+  }
+
+  .card {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .header {
+    background-size: 120%;
+  }
+
+  .header_wrapper {
+    padding-bottom: 80px;
+  }
+
+  .nav_list {
+    display: flex;
+    grid-column: 6/9;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .greetings_wrapper h2 {
+    font-size: 3rem;
+  }
+
+  .greetings_wrapper p {
+    width: 45%;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    grid-column: 1/2;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 30%;
+    margin: 0;
+  }
+
+  .card + .card {
+    margin: 0;
+  }
+}
+/* ========
+   Desktop
+   ======== */
+@media screen and (min-width: 1200px) {
+  .header {
+    background-size: 74%;
+  }
+
+  .greetings_wrapper p {
+    width: 35%;
+    font-size: 0.8rem;
+  }
+
+  .main {
+    padding-top: 70px;
+  }
+}
